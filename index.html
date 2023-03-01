@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #f5f5dc52;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 600px;
+            margin: 0 auto;
+        }
+        .addItem{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .addItem input{
+            width: 49%;
+            padding: 10px 35px;
+            border: 1px solid #ffff00;
+            transition: all .3s ease;
+            border-radius: 6px;
+            background-color: white;
+            margin-right: 16px;
+        }
+        .addItem input:focus{
+            outline: 0;
+            border-color: #b0b000;
+        }
+        .addItem button{
+            padding: 10px 35px;
+            border: 1px solid #ffff00;
+            cursor: pointer;
+            border-radius: 6px;
+            background-color: antiquewhite;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li{
+            position: relative;
+            padding: 7px 0;
+            margin: 7px 0;
+            cursor: pointer;
+            padding-left: 30px;
+            transition: all .3s ease;
+            font-weight: 400;
+            user-select: none;
+        }
+        ul li:hover{
+            font-weight: 900;
+        }
+        ul li::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 100%;
+        }
+        ul li.active::before{
+            background-color: green;
+        }
+        p{
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            color: #d70000;
+            font-weight: bold;
+            margin-top: 6px;
+            font-size: 14px;
+            padding-left: 6px;
+        }
+    </style>
+
+    <div class="wrapper">
+        <h1 style="text-align: center">To Do List</h1>
+        <div class="addItem">
+            <input type="text">
+            <button class="add" style="margin-right: 16px;">Add</button>
+            <button class="clear">Clear</button>
+            <p></p>
+        </div>
+        <div class="items">
+            <ul></ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
